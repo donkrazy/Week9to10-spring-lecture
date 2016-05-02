@@ -13,17 +13,8 @@
         http://www.springframework.org/schema/task
         http://www.springframework.org/schema/task/spring-task.xsd">
 
+	<!-- @Autowired -->
 	<context:annotation-config />
-
-	<context:component-scan base-package="com.estsoft.springcontainer">
-		<context:include-filter type="annotation"
-			expression="org.springframework.stereotype.Repository" />
-		<context:include-filter type="annotation"
-			expression="org.springframework.stereotype.Service" />
-		<context:include-filter type="annotation"
-			expression="org.springframework.stereotype.Component" />
-	</context:component-scan>
-
 
 	<bean id="user1" class="com.estsoft.springcontainer.User">
 		<constructor-arg value="둘리" />
@@ -55,5 +46,18 @@
 	</bean>
 
 	<bean id="guest" class="com.estsoft.springcontainer.Guest" />
-
+	<bean id="guest2" class="com.estsoft.springcontainer.Guest" >
+		<property name="users">
+			<list>
+				<ref bean="user1" />
+				<ref bean="user2" />
+				<ref bean="user3" />
+				<ref bean="user4" />
+				<bean class="com.estsoft.springcontainer.User" >
+					<constructor-arg value="사용자5"/>
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
 </beans>        

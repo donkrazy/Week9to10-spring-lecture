@@ -49,7 +49,10 @@ public class App {
 
     	//Friend friend1 = (Friend)applicationContext.getBean( "heedongyee" );
     	//System.out.println( friend1 );
-    	
+
+    	Guest guest2 = (Guest)applicationContext.getBean( "guest2" );
+    	System.out.println( guest2 );
+
     	( ( ConfigurableApplicationContext ) applicationContext ).close();
     }
 }

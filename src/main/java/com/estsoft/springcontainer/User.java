@@ -1,6 +1,5 @@
 package com.estsoft.springcontainer;
 
-//@Component
 public class User {
 	public String name;
 	public String email;
