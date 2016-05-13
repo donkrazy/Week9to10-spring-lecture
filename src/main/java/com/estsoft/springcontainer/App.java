@@ -27,7 +27,7 @@ public class App {
     public static void applicationContextTest() {
     	ApplicationContext applicationContext = 
     			new ClassPathXmlApplicationContext( "config/applicationContext.xml" );
-    	
+    			
  //   	User user1 = applicationContext.getBean( User.class );
  //   	user1.setName( "안대혁" );
  //   	System.out.println( user1 );
